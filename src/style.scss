@@ -1,0 +1,53 @@
+$primary: "Poppins", sans-serif;
+$secondary: "Open Sans", sans-serif;
+:root {
+  --primary-color: #1f1736; /* Replace with your desired primary color value */
+}
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./styles/header.scss";
+@import "./styles/footer.scss";
+@import "./styles/torch";
+@import "./styles/home.scss";
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  // background-color: var(--primary-color);
+  color: antiquewhite;
+}
+
+.section-gap {
+  display: block;
+  height: 6rem;
+}
+.section-padding {
+  padding: 130px 0;
+}
+.section-title {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: $primary;
+}
+.section-subtitle {
+  font-size: 1.8rem;
+  font-family: $primary;
+  font-weight: 200;
+}
+.paragraph {
+  font-size: 1.125rem;
+  font-family: $secondary;
+  font-weight: 100;
+  line-height: 1.3;
+}
+// image reveal
+img {
+  max-width: 100%;
+  height: auto;
+}
+.reveal {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
