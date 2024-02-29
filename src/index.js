@@ -42,3 +42,77 @@ if (document.querySelector(".home-section")) {
         });
     });
 }
+
+// menu
+let headTag = document.querySelector(".header");
+let menuBtn = document.querySelector(".menu-btn");
+let menuTl = gsap.timeline(
+    {
+        paused: true,
+        onStart() {
+            menuBtn.classList.add("active");
+            headTag.classList.add("menu-open");
+            document.querySelector("html").style.overflow = "hidden";
+        },
+        onReverseComplete() {
+            menuBtn.classList.remove("active");
+            headTag.classList.remove("menu-open");
+            document.querySelector("html").style.overflow = "visible";
+
+        }
+    }
+).fromTo(".header-wrap", {
+    opacity: 0,
+    backgroundColor: "transparent",
+}, {
+    opacity: 1,
+    backgroundColor: "blue",
+    duration: .5,
+    ease: "slow"
+}).fromTo(
+    [".menu-right-up", ".menu-left", ".menu-right-down"], {
+    clipPath: "polygon(100% 100%, 100% 0%, 100% 0%, 100% 100%)"
+}, {
+    clipPath: "polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%)",
+    stagger: 0.1,
+    ease: "slow(0.7,0.6)"
+}
+)
+menuBtn.addEventListener("click", () => {
+    if (menuBtn.classList.contains("active")) {
+        menuTl.reverse();
+    }
+    else {
+        menuTl.play();
+    }
+})
+
+/**
+ * BARN OWL 
+ * 
+ * 
+ * 
+ */
+const about_home_content = new Swiper('#about-home-content-swiper', {
+    loop: true,
+    speed: 2000,
+    effect: "fade",
+    pagination: {
+        el: '.swiper-pagination',
+        type: "fraction"
+    },
+    navigation: {
+        nextEl: '.about-home-nav-next',
+        prevEl: '.about-home-nav-prev',
+    },
+
+
+});
+
+const about_home_img = new Swiper('#about-home-img-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    noSwiping: true,
+    noSwipingClass: "swiper-slide"
+});
+about_home_content.controller.control = about_home_img;
