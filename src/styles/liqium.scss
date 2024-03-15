@@ -1,0 +1,40 @@
+$primary2: #151519;
+$secondary2: yellow;
+.liqium {
+  background-color: $primary2;
+}
+.projects {
+  &-gallery {
+    &-header {
+      display: flex;
+      justify-content: center;
+      &-wrap {
+        text-align: center;
+        &-title {
+          font-size: 4rem;
+        }
+      }
+    }
+    &-items {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      .projects-gallery-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2rem;
+        &.wd-10 {
+          width: 10%;
+        }
+        &.wd-20 {
+          width: 20%;
+        }
+        &.wd-50 {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

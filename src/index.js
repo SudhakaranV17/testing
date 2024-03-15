@@ -1,5 +1,7 @@
 import "./style.scss";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 // gsap.set(".cursor", { xPercent: -50, yPercent: -50 })
 // let cursor = document.querySelector(".cursor");
@@ -30,18 +32,18 @@ import gsap from "gsap";
 //     console.log("screenX ", e.screenX);
 //     console.log("offsetX ", e.offsetX);
 // })
-if (document.querySelector(".home-section")) {
-    const homebanner = document.querySelector(".home")
-    const homeimg = document.querySelector(".home-img-wrap img")
-    homebanner.addEventListener("mousemove", (event) => {
-        console.log(event.pageX);
-        gsap.to(homeimg, {
-            x: event.pageX * -1 / 100,
-            ease: "slow",
-            duration: 0.5
-        });
-    });
-}
+// if (document.querySelector(".home-section")) {
+//     const homebanner = document.querySelector(".home")
+//     const homeimg = document.querySelector(".home-img-wrap img")
+//     homebanner.addEventListener("mousemove", (event) => {
+//         console.log(event.pageX);
+//         gsap.to(homeimg, {
+//             x: event.pageX * -1 / 100,
+//             ease: "slow",
+//             duration: 0.5
+//         });
+//     });
+// }
 
 // menu
 let headTag = document.querySelector(".header");
@@ -93,26 +95,64 @@ menuBtn.addEventListener("click", () => {
  * 
  * 
  */
-const about_home_content = new Swiper('#about-home-content-swiper', {
-    loop: true,
-    speed: 2000,
-    effect: "fade",
-    pagination: {
-        el: '.swiper-pagination',
-        type: "fraction"
+// const about_home_content = new Swiper('#about-home-content-swiper', {
+//     loop: true,
+//     speed: 2000,
+//     effect: "fade",
+//     pagination: {
+//         el: '.swiper-pagination',
+//         type: "fraction"
+//     },
+//     navigation: {
+//         nextEl: '.about-home-nav-next',
+//         prevEl: '.about-home-nav-prev',
+//     },
+
+
+// });
+
+// const about_home_img = new Swiper('#about-home-img-swiper', {
+//     loop: true,
+//     slidesPerView: 1,
+//     noSwiping: true,
+//     noSwipingClass: "swiper-slide"
+// });
+// about_home_content.controller.control = about_home_img;
+
+
+// liqium
+if (document.querySelector(".projects-gallery-section")) {
+    console.log("hello");
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: document.querySelector(".projects-gallery-items"),
+            toggleActions: "restart none none reverse",
+            start: "top 50%",
+            end: "bottom",
+            scrub: true,
+            markers: true
+        }
+    }).fromTo(
+        ".wd-20",
+        {
+            transform: "translateY(100px)"
+        }, {
+        transform: "translateY(0px)",
+        ease: "slow"
+
     },
-    navigation: {
-        nextEl: '.about-home-nav-next',
-        prevEl: '.about-home-nav-prev',
-    },
+        "projects-gallery"
+    )
+        .fromTo(
+            ".wd-50",
+            {
+                transform: "translateY(250px)"
+            }, {
+            transform: "translateY(0px)",
+            ease: "slow",
 
+        },
+            "projects-gallery"
+        )
 
-});
-
-const about_home_img = new Swiper('#about-home-img-swiper', {
-    loop: true,
-    slidesPerView: 1,
-    noSwiping: true,
-    noSwipingClass: "swiper-slide"
-});
-about_home_content.controller.control = about_home_img;
+}
