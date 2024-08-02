@@ -214,3 +214,21 @@
     }
   }
 }
+
+// nested swiper
+#mainSwiper {
+  .swiper-slide {
+    width: 500px !important;
+    height: 500px !important;
+    margin: auto;
+    background-color: aqua;
+  }
+}
+#innerSwiper {
+  .swiper-slide {
+    width: 250px !important;
+    height: 250px !important;
+    margin: auto;
+    background-color: chartreuse;
+  }
+}

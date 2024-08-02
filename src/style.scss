@@ -1,7 +1,7 @@
 $primary: "Poppins", sans-serif;
 $secondary: "Open Sans", sans-serif;
 :root {
-  --primary-color: #1f1736; /* Replace with your desired primary color value */
+  --primary-color: #000; /* Replace with your desired primary color value */
 }
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "./styles/header.scss";
@@ -9,12 +9,12 @@ $secondary: "Open Sans", sans-serif;
 @import "./styles/torch";
 @import "./styles/liqium";
 @import "./styles/home.scss";
+@import "./styles/casa.scss";
 body {
   margin: 0;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
   // background-color: var(--primary-color);
-  color: antiquewhite;
 }
 
 .section-gap {

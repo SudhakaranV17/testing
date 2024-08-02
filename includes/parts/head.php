@@ -8,7 +8,7 @@
   <!-- Primary Meta Tags -->
   <meta name="title" content="static website template" />
   <meta name="description" content="static website template" />
-
+  <meta name="google-signin-client_id" content="993797730483-v9gf8bgvcm3n1deau06lq10rua4rjegi.apps.googleusercontent.com">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="static website template" />
   <meta property="og:url" content="" />
@@ -23,7 +23,7 @@
   <meta property="twitter:description" content="static website template" />
   <meta property="twitter:image" content="" />
   <!-- style sheets -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
