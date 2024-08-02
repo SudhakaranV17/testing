@@ -111,3 +111,23 @@
     }
   }
 }
+
+.footer {
+  &-main {
+    position: relative;
+    &-contact {
+      position: absolute;
+      top: 0;
+    }
+    &-content {
+      display: flex;
+      &-parallax {
+        flex-grow: 1;
+        flex-basis: auto;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
