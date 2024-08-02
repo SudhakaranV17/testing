@@ -66,3 +66,48 @@
 .swiper-pagination {
   color: #fff;
 }
+
+// experience
+.tmp {
+  &-header {
+    padding: 0 10%;
+    margin: auto;
+    padding-bottom: 100px;
+    background-color: #e5e5e5;
+  }
+  &-section {
+    // background-color: #e5e5e5;
+  }
+  &-main {
+    padding: 0 10%;
+    margin: auto;
+    background-color: #e5e5e5;
+    position: relative;
+    display: flex;
+
+    &-items {
+      position: absolute;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      &-item {
+        width: calc(50% - 1.5rem);
+        text-align: center;
+        &.big {
+          width: calc(100% - 3rem);
+        }
+        &-title {
+          font-size: 2rem;
+          line-height: 1;
+          margin: 0;
+        }
+      }
+    }
+    &-content {
+      width: 30%;
+      margin-left: auto;
+      padding: 100px 0;
+    }
+  }
+}

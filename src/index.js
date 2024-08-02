@@ -241,7 +241,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
+if (document.querySelector('.tmp-section')) {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".tmp-main",
+            start: "top top",
+            end: "bottom ",
+            pin: ".tmp-main",
+            scrub: 1,
+            markers: true
+        }
+    }).fromTo(
+        ".tmp-main-items", {
+        y: 0
+    }, {
+        y: () => `-${document.querySelector(".tmp-main-items").scrollHeight}` * 0.8
+    }
+    )
+}
 
 
 

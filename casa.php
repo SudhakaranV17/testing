@@ -105,8 +105,76 @@ include __DIR__ . '/includes/parts/head.php'; // Include the common head section
             </div>
         </div>
     </section>
-
-
+    <div class="section-padding">
+    </div>
+    <section class="tmp-section">
+        <div class="tmp">
+            <div class="tmp-header">
+                <p class="section-minititle">Memorable</p>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="tmp-main">
+                <div class="tmp-main-items">
+                    <div class="tmp-main-items-item big">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp1.jpg" alt="">
+                        </div>
+                        <p class="">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="tmp-main-items-item">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp2.jpg" alt="">
+                        </div>
+                        <p class="tmp-main-items-item-title">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="tmp-main-items-item">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp3.jpg" alt="">
+                        </div>
+                        <p class="">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="tmp-main-items-item big">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp4.jpg" alt="">
+                        </div>
+                        <p class="">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="tmp-main-items-item">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp5.jpg" alt="">
+                        </div>
+                        <p class="">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="tmp-main-items-item">
+                        <div class="tmp-main-items-item-img">
+                            <img src="./assests/images/casa/tmp6.jpg" alt="">
+                        </div>
+                        <p class="">lorem ipsum dolor</p>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="tmp-main-content">
+                    <p class="mb-4">lorem</p>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit repudiandae magni error eaque temporibus rerum, adipisci officiis suscipit numquam fugiat exercitationem vel illum sunt tempore labore corrupti modi? Tenetur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
+    <div class="section-gap"></div>
     <?php include __DIR__ . '/includes/parts/footer.php'; ?>
 
 </body>
